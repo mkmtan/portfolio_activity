@@ -1,0 +1,151 @@
+body {
+    background-color: white;
+    color: black;
+    margin: 0; 
+    padding: 0;
+    overflow-y: auto; 
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+footer {
+    background-color: #cb5654;
+    text-align: center;
+    padding: 0.5em 0;
+    margin: 0;
+    width: 100%;
+}
+
+header {
+    background-color: #cb5654;
+    text-align: center;
+    padding: 1em 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.toggle-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #d1a429;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.toggle-btn:hover {
+    background-color: #7d6a1d;
+}
+img {
+    margin-right: 20px; 
+    position: static;
+    animation: slideInLeft 1s ease-out 0.5s; 
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#aboutMeContent {
+    animation: slideIn 1s ease-out 0.5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@media only screen and (min-width: 600px) {
+    header {
+        font-size: 24px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #home {
+        flex-direction: row;
+    }
+
+    #aboutMeContent {
+        width: 70%;
+        margin: 0 auto; 
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    header {
+        font-size: 18px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #home {
+        flex-direction: column;
+    }
+
+    #aboutMeContent {
+        width: 100%;
+    }
+}
+#home {
+    display: flex;
+    align-items: center;
+    padding-left:20px;
+}
+
+#aboutMeContent {
+    width: 100%; 
+}
+.card {
+    background-color: white;
+    color: black;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card p {
+    margin: 10px 0;
+}
+
+.others {
+    padding: 15px;
+}
